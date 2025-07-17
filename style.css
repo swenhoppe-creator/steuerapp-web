@@ -1,0 +1,41 @@
+
+body {
+    font-family: sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 2em;
+}
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 1em;
+    padding: 2em;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+input, select {
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    font-size: 1em;
+}
+button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}

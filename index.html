@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteuerApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SteuerApp</h1>
+        <div id="step1" class="step active">
+            <label for="steuerjahr">Steuerjahr:</label>
+            <select id="steuerjahr">
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+            </select>
+            <button onclick="nextStep()">Weiter</button>
+        </div>
+        <div id="step2" class="step">
+            <h2>Fahrzeugdaten</h2>
+            <input id="hersteller" placeholder="Hersteller"><br>
+            <input id="modell" placeholder="Modell"><br>
+            <input id="baujahr" type="number" placeholder="Baujahr"><br>
+            <input id="kraftstoff" placeholder="Kraftstoff"><br>
+            <input id="verbrauch" type="number" placeholder="Verbrauch l/100km"><br>
+            <button onclick="nextStep()">Weiter</button>
+        </div>
+        <div id="step3" class="step">
+            <h2>Fahrt erfassen</h2>
+            <input id="startort" placeholder="Startort"><br>
+            <input id="zielort" placeholder="Zielort"><br>
+            <input id="kilometer" type="number" placeholder="Kilometer"><br>
+            <button onclick="addFahrt()">Fahrt hinzufügen</button>
+            <ul id="fahrtenListe"></ul>
+            <button onclick="nextStep()">Weiter</button>
+        </div>
+        <div id="step4" class="step">
+            <h2>Kind(er) erfassen</h2>
+            <input id="kindName" placeholder="Name"><br>
+            <input id="kindGeburtsdatum" type="date"><br>
+            <label><input type="checkbox" id="kindergeld" checked> Kindergeld erhalten</label><br>
+            <button onclick="addKind()">Kind hinzufügen</button>
+            <ul id="kinderListe"></ul>
+            <button onclick="nextStep()">Zur Zusammenfassung</button>
+        </div>
+        <div id="step5" class="step">
+            <h2>Zusammenfassung</h2>
+            <pre id="summary"></pre>
+            <button onclick="goToStart()">Neu beginnen</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
